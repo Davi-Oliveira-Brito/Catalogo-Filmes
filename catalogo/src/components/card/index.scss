@@ -1,12 +1,12 @@
 .card {
-
+    flex: 0 0 auto;   /* Faz os cards não crescerem ou encolherem */
     display: flex;
     justify-content: center;
     align-items: center;
 
     background-color: #1D1C1C;
     width: 20vw;
-    height: 80%;
+    height: 70vh;
     border-radius: 20px;
 
     .card-content {
@@ -20,7 +20,14 @@
             border-radius: 10px;
             width:100%;
             align-self: center;
+            object-fit: cover;     /* Ajusta a imagem para preencher o espaço sem distorção */
+            object-position: center;
+            color: #FFF;
+            font-family: 'Poppins-Regular';
+            font-size: 12px;
+            
         }
+
 
 
         p {
@@ -34,7 +41,7 @@
             padding: 8px 20px;
             border: none;
             border-radius: 50px;
-            background-color: #000;
+            background-color: #5727A3;
 
             font-family: 'Poppins-Medium';
             font-size: 18px;
@@ -46,7 +53,7 @@
         }
         button:hover{
             background-color: #FFF;
-            color: #000;
+            color: #5727A3;
         }
 
 

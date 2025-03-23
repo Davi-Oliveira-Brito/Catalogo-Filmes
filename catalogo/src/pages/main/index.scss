@@ -1,4 +1,4 @@
-.main-page{
+.main-page {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -11,69 +11,118 @@
 
 
 
-    .header-div{
+    .header-div {
         width: 100%;
 
     }
 
-    .content-div{
+    .content-div {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         height: 90vh;
         width: 90vw;
-        
-        .top{
+
+        .top {
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 100%;
             gap: 2px;
-            
-            label{
+
+            label {
                 font-family: 'Poppins-Regular';
                 color: #FFFFFF;
                 line-height: 1;
 
             }
-            input{
+
+            input {
                 font-family: 'Poppins-Regular';
                 font-size: 16px;
-                
+
                 padding: 10px 15px;
                 border: none;
                 border-radius: 5px;
-                
+
                 outline: none;
                 transition: all 0.3s ease-in-out;
-            }::placeholder{
+            }
+
+            input::placeholder {
                 color: #9c9c9c;
             }
-            
-            input:focus{
-                box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+
+            input:focus {
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
             }
 
 
+            button {
+                padding: 8px 20px;
+                border: none;
+                border-radius: 50px;
+                background-color: #000;
+
+                font-family: 'Poppins-Medium';
+                font-size: 18px;
+                color: #FFF;
+
+                width: 20%;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #FFF;
+                color: #000;
+            }
+
+
+
         }
 
-        .bottom{
+        .bottom {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            
+            justify-content: flex-start;
+
             align-items: center;
-            
+
             height: 90%;
 
+            gap: 2em;
+
+
+
+            .carousel-container {
+                display: flex;
+                gap: 20px;
+                overflow: hidden;
+                transition: transform 0.3s ease-in-out;
+    
+            }
+            .carousel-container::-webkit-scrollbar {
+                display: none;
+                /* Oculta a barra de rolagem */
+            }
+
+            .left{
+                width: 30px;
+            }
+
+            .right{
+                width: 30px;
+                transform: rotate(180deg);
+            }
 
         }
 
-        
-        
-        
-        
+
+
+
+
     }
 
 }

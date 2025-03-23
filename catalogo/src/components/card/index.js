@@ -1,15 +1,15 @@
 import React from "react";
 import './index.scss'
 
-export default function Card() {
+export default function Card({imagem, nome, onClick}) {
     return (
         <main className="card">
             <div className="card-content">
-                <img src="/assets/images/miranha.svg" alt="" />
+                <img src={imagem} alt="Sem Imagem" />
 
           
-                    <p>O espetacular Homem Aranha</p>
-                    <button>Saiba Mais</button>
+                    <p>{nome}</p>
+                    <button onClick={onclick}>Saiba Mais</button>
           
             </div>
         </main>
