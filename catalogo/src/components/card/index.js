@@ -1,17 +1,17 @@
 import React from "react";
 import './index.scss'
 
-export default function Card({imagem, nome, onClick}) {
+export default function Card({filme, Click }) {
     return (
         <main className="card">
             <div className="card-content">
-                <img src={imagem} alt="Sem Imagem" />
-
-          
-                    <p>{nome}</p>
-                    <button onClick={onclick}>Saiba Mais</button>
-          
+                <img src={filme.imagem} alt="Sem Imagem" />
+                <p>{filme.titulo}</p>
+                <button onClick={() => Click(filme)}>Saiba Mais</button>
             </div>
         </main>
     );
 }
+
+        
+

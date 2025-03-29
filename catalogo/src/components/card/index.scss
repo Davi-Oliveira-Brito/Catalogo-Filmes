@@ -1,63 +1,150 @@
 .card {
-    flex: 0 0 auto;   /* Faz os cards não crescerem ou encolherem */
+    flex: 0 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: #1D1C1C;
-    width: 20vw;
-    height: 70vh;
+    width: 100%;
+    max-width: 320px;
+    min-height: 450px;
+    height: auto;
     border-radius: 20px;
+    margin: 1rem;
+    
+    @media (max-width: 768px) {
+        max-width: 280px;  /* More specific width for tablets */
+        min-height: 420px;
+        margin: 0.85rem;
+    }
+    
+    @media (max-width: 425px) {
+        max-width: 85%;
+        min-height: 380px;
+        margin: 0.75rem;
+        border-radius: 15px;
+    }
+    
+    @media (max-width: 368px) {
+        max-width: 95%;
+        min-height: 350px;
+        margin: 0.5rem;
+    }
 
     .card-content {
+        flex: 0 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         height: 95%;
-        width: 85%;
+        width: 90%;
+        padding: 1rem 0;
+        
+        @media (max-width: 768px) {
+            height: 94%;
+            width: 90%;
+        }
+        
+        @media (max-width: 425px) {
+            height: 92%;
+            padding: 0.75rem 0;
+        }
+        
+        @media (max-width: 368px) {
+            width: 92%;
+            height: 90%;
+            padding: 0.5rem 0;
+        }
 
         img {
             border-radius: 10px;
-            width:100%;
-            align-self: center;
-            object-fit: cover;     /* Ajusta a imagem para preencher o espaço sem distorção */
+            width: 100%;
+            height: auto;
+            max-height: 65%;
+            object-fit: cover;
             object-position: center;
             color: #FFF;
             font-family: 'Poppins-Regular';
             font-size: 12px;
             
+            @media (max-width: 768px) {
+                max-height: 62%;
+            }
+            
+            @media (max-width: 425px) {
+                border-radius: 8px;
+                max-height: 60%;
+            }
+            
+            @media (max-width: 368px) {
+                border-radius: 6px;
+            }
         }
 
-
-
         p {
-            line-height: 1;
+            line-height: 1.2;
             font-family: 'Poppins-Medium';
             color: #FFF;
             font-size: 18px;
+            margin: 1rem 0;
+            text-align: center;
+            
+            @media (max-width: 768px) {
+                font-size: 17px;
+                margin: 0.85rem 0;
+            }
+            
+            @media (max-width: 425px) {
+                font-size: 15px;
+                margin: 0.75rem 0;
+            }
+            
+            @media (max-width: 368px) {
+                font-size: 14px;
+                margin: 0.5rem 0;
+                line-height: 1.1;
+            }
         }
 
         button {
             padding: 8px 20px;
             border: none;
-            border-radius: 50px;
+            border-radius: 10px;
             background-color: #5727A3;
-
             font-family: 'Poppins-Medium';
             font-size: 18px;
             color: #FFF;
-
             width: 60%;
+            max-width: 200px;
             transition: 0.5s;
             cursor: pointer;
+            
+            @media (max-width: 768px) {
+                width: 70%;
+                max-width: 180px;
+                font-size: 16px;
+                padding: 7px 18px;
+            }
+            
+            @media (max-width: 425px) {
+                width: 85%;
+                font-size: 15px;
+                padding: 6px 14px;
+                border-radius: 8px;
+            }
+            
+            @media (max-width: 368px) {
+                width: 90%;
+                font-size: 14px;
+                padding: 5px 12px;
+                border-radius: 7px;
+            }
         }
-        button:hover{
+        
+        button:hover {
             background-color: #FFF;
             color: #5727A3;
         }
-
-
-
     }
-
 }
+

@@ -1,0 +1,115 @@
+
+.modal-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 99%;
+
+    margin: 0;
+    padding: 0;
+
+    
+    
+    @media(max-width: 1137px) {
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .left {
+
+            img {
+                height: 60vh;
+
+            }
+        }
+
+    }
+
+    .left {
+        width: 50%;
+        height: 95%;
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        height: 95%;
+        width: 50%;
+        padding: 0 10px;
+
+
+        .tittle {
+            font-family: 'Poppins-Bold';
+            color: #FFF;
+            font-size: 24px;
+            ;
+        }
+
+        .text {
+            font-family: 'Poppins-Regular';
+            color: #FFF;
+            font-size: 14px;
+            line-height: 1.3;
+
+            span {
+                font-family: 'Poppins-Bold';
+            }
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+
+            button {
+                padding: 4px 10px;
+                border: none;
+                border-radius: 10px;
+                background-color: #5727A3;
+                font-family: 'Poppins-Medium';
+                font-size: 18px;
+                color: #FFF;
+                width: 40%;
+                max-width: 200px;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #FFF;
+                color: #5727A3;
+            }
+
+        }
+    }
+}
+
+@media(max-width:1024px){
+    .modal-content{
+        flex-direction: column;
+       .left{
+           width: 100%;
+            height: 60%;
+
+            img{
+                object-fit: cover;
+                object-position: top;
+            }
+       }
+       .right{
+           width: 100%;
+           
+       }
+    }
+}
