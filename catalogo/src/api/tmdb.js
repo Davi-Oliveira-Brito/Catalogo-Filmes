@@ -1,4 +1,7 @@
-const API_KEY = "75a9f0e5fec63fa754c993b6e2919f0c"; // Substitua com sua chave do TMDB
+
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY; // Para Create React App
+
+
 const BASE_URL = "https://api.themoviedb.org/3";
 
 export const fetchMovies = async (query, page = 1) => {
