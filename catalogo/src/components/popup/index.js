@@ -3,22 +3,7 @@ import Modal from "react-modal";
 import "./index.scss";
 
 export default function ModalComponent({ isOpen, closeModal, filme }) {
-    if (!filme) return null; // Se não houver filme selecionado, não exibe nada
-    let estilo = {
-        content: {
-            width: "60vw",
-            height: "60vh",
-            margin: "0",
-            border: "none",
-            alignSelf: "center",
-            justifySelf: "center",
-            borderRadius: "10px",
-            background: "#1D1C1C",
-
-        },
-        overlay: { backgroundColor: "rgba(0, 0, 0, 0.7)" },
-    };
-
+    if (!filme) return null; 
 
     
 
