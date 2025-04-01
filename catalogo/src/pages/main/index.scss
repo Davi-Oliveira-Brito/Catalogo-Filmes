@@ -4,11 +4,11 @@
     justify-content: space-between;
 
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 
     background-color: #0A0A0A;
-
+    overflow-x: hidden;
 
 
     .header-div {
@@ -103,35 +103,12 @@
 
         .bottom {
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
 
             height: 90%;
 
-
-            .carousel-container {
-                display: flex;
-                overflow: hidden;
-                transition: transform 1s ease-in-out;
-                animation: slide 10s infinite;
-            }
-
-            .carousel-container::-webkit-scrollbar {
-                display: none;
-
-                /* Oculta a barra de rolagem */
-            }
-
-            .left {
-                width: 30px;
-            }
-
-            .right {
-                width: 30px;
-                transform: rotate(180deg);
-            }
 
             @media (max-width: 425px) {
                 gap: 10px;
